@@ -2,20 +2,109 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>语音增强示例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .audio-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .column {
+            width: 30%;
+            min-width: 250px;
+            padding: 10px;
+        }
+        .column h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .audio-box {
+            background: #f1f1f1;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+        audio {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>语音增强示例</h1>
-    <p>以下是处理前后的音频对比：</p>
-    <h2>原始音频</h2>
-    <audio controls>
-        <source src="00t5hG031EmZTpJtcnhS0g_doubletalk_mic.wav" type="audio/mpeg">
-        您的浏览器不支持音频播放。
-    </audio>
-    <h2>增强后音频</h2>
-    <audio controls>
-        <source src="00t5hG031EmZTpJtcnhS0g_doubletalk_mic.wav" type="audio/mpeg">
-        您的浏览器不支持音频播放。
-    </audio>
+
+    <h1>Audio Examples</h1>
+
+    <div class="audio-container">
+        <!-- 第一列：混合音频 -->
+        <div class="column">
+            <h2>Mix</h2>
+            <div class="audio-box">
+                <audio controls>
+                    <source src="mix1.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-box">
+                <audio controls>
+                    <source src="mix2.wav" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-box">
+                <audio controls>
+                    <source src="mix3.wav" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- 第二列：ULCNet-AER 处理后的音频 -->
+        <div class="column">
+            <h2>Processed by ULCNet-AER</h2>
+            <div class="audio-box">
+                <audio controls>
+                    <source src="ulcnet1.wav" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-box">
+                <audio controls>
+                    <source src="ulcnet2.wav" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-box">
+                <audio controls>
+                    <source src="ulcnet3.wav" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- 第三列：EchoFree 处理后的音频 -->
+        <div class="column">
+            <h2>Processed by EchoFree</h2>
+            <div class="audio-box">
+                <audio controls>
+                    <source src="echofree1.wav" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-box">
+                <audio controls>
+                    <source src="echofree2.wav" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="audio-box">
+                <audio controls>
+                    <source src="echofree3.wav" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
