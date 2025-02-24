@@ -11,43 +11,59 @@
             margin: 0;
             padding: 20px;
         }
-        h1 {
-            margin-bottom: 5px; /* 减少 h1 底部间距 */
-        }
         
+        /* 主标题（页面标题） */
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* 二级标题（整体音频展示） */
         h2 {
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: bold;
             color: #333;
-            margin-top: 120px;  /* 增加 h2 到 h1 的间距 */
-            margin-bottom: 5px; /* 减少 h2 到 h3 的间距 */
+            margin-top: 20px;
+            margin-bottom: 8px;
         }
-        .sub-heading {
-            font-size: 18px; /* 适当缩小字体 */
-            font-weight: bold; /* 让它比普通文本更突出 */
-            margin-top: 5px; /* 减小与上方 h2 的间距 */
-            margin-bottom: 10px; /* 增加与下方内容的间距 */
-            color: #444; /* 颜色稍微加深 */
+
+        /* 三级标题（场景分类） */
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #444;
+            margin-top: 12px;
+            margin-bottom: 15px;
         }
+
+        /* 四级标题（每列的分类） */
+        h4 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
         .audio-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
+
         .column {
             width: 30%;
             min-width: 250px;
             padding: 10px;
         }
-        .column h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
+
         .audio-box {
             background: #f1f1f1;
             padding: 10px;
             margin: 10px 0;
             border-radius: 10px;
         }
+
         audio {
             width: 100%;
         }
@@ -56,13 +72,13 @@
 <body>
 
     <h1>Audio Examples for EchoFree</h1>
-    <h2>Performance on ICASSP 2023 AEC Challenge</h2>  <!-- 添加的小标题 -->
-    <h3 class="sub-heading">Double-talk scenario</h3>  <!-- 新增的三级标题 -->
+    <h2>Performance on ICASSP 2023 AEC Challenge</h2>
+    <h3>Double-talk Scenario</h3> <!-- 三级标题，作为二级标题的子标题 -->
 
     <div class="audio-container">
         <!-- 第一列：混合音频 -->
         <div class="column">
-            <h4>Mix</h4>
+            <h4>Mix</h4> <!-- 四级标题，每列的分类 -->
             <div class="audio-box">
                 <audio controls>
                     <source src="mix1.wav" type="audio/mpeg">
@@ -153,4 +169,3 @@
 
 </body>
 </html>
-
