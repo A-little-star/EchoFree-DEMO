@@ -11,7 +11,7 @@
             margin: 0;
             padding: 20px;
         }
-        
+
         /* 主标题（页面标题） */
         h1 {
             font-size: 28px;
@@ -19,30 +19,28 @@
             margin-bottom: 10px;
         }
 
-        /* 二级标题（整体音频展示） */
+        /* 二级标题 */
         h2 {
             font-size: 22px;
             font-weight: bold;
             color: #333;
-            margin-top: 20px;
-            margin-bottom: 8px;
+            margin: 20px 0; /* 统一标题间距 */
         }
 
-        /* 三级标题（场景分类） */
+        /* 三级标题 */
         h3 {
             font-size: 18px;
             font-weight: bold;
             color: #444;
-            margin-top: 12px;
-            margin-bottom: 6px;
+            margin: 20px 0; /* 统一标题间距 */
         }
 
-        /* 四级标题（每列的分类） */
+        /* 四级标题 */
         h4 {
             font-size: 16px;
             font-weight: bold;
             color: #555;
-            margin-bottom: 10px;
+            margin: 20px 0; /* 统一标题间距 */
         }
 
         .audio-container {
@@ -73,12 +71,12 @@
 
     <h1>Audio Examples for EchoFree</h1>
     <h2>Performance on ICASSP 2023 AEC Challenge</h2>
-    <h3>Double-talk Scenario</h3> <!-- 三级标题，作为二级标题的子标题 -->
+    <h3>Double-talk Scenario</h3>
 
     <div class="audio-container">
         <!-- 第一列：混合音频 -->
         <div class="column">
-            <h4>Mix</h4> <!-- 四级标题，每列的分类 -->
+            <h4>Mix</h4>
             <div class="audio-box">
                 <audio controls>
                     <source src="mix1.wav" type="audio/mpeg">
